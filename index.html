@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>My test page</title>
+<meta charset="UTF-8">
+<meta name="description" content="My test page">
+<meta name="keywords" content="HTML,CSS,JavaScript">
+<meta name="author" content="John Doe">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<meta http-equiv="refresh" content="30">     -->
+<link rel="icon" type="image/x-icon" href="images/3d2f587a669b966a705d1aff09705f33.ico">
+<link rel="stylesheet" href="html/styles.css">
+<script defer src="myscript.js"></script>
+<base target="_blank">
+</head>
+
+<body>
+
+<div class="header">
+ <h1> Header</h1>
+</div>
+
+<div class="row clearfix">
+
+<div class="left">
+<h2>Menu</h2>
+<div class="menucontainer">
+<a href="https://www.google.com/search?q=weather" target="_blank"><button type="button" title="Show current weather">Weather</button></a>
+<br>
+<button type="button"><a href="https://www.google.com/search?q=weather" target="_blank">Weather</a></button>
+<br>
+<a id="l01" href="https://www.google.com/search?q=weather" target="_blank"  data-tooltip="HTML<br>подсказка">Weather</a>
+<br>
+
+<a target="_blank" href="images/img_5terre.jpg">
+  <div>
+    <img src="images/img_5terre.jpg" alt="Cinque Terre" width="60" height="40">
+    <div>A description of the image</div>
+  </div>
+</a>
+
+<h2 id="demo7"><br></h2>
+<button onclick="clearInterval(timer)">Stop time</button>
+<div id="calendar"></div>
+<div id="demo12"></div>
+
+</div>
+</div>
+
+<!--begin of the right part-->
+<div class="right">
+
+<h2>JavaScript test page</h3>
+<button type="button" onclick="const d = new Date(); document.getElementById('demo').innerHTML = d; ">
+Click this to display Date and Time.</button>
+<br>
+<div id="demo" ><br></div>
+<button type="button" onclick="document.getElementById('demo').innerHTML='<br>'; ">Hide time</button>
+<br>
+
+<!--
+<img src="images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+-->
+
+<!--<button type="button" onclick="window.alert(x1); x1++;">show x1</button>
+<br>-->
+
+<button onclick="this.style.display='none'">Click to Remove Me!</button>
+<br>
+<button onclick="this.innerHTML=Date()" >The time is?</button>
+<br>
+<br>
+<section>
+  <label for="password">Password</label>
+  <input id="password2" name="password" type="password" autocomplete="current-password" required>
+    <button id="toggle-password" type="button" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button>
+</section>
+<br>
+
+<button id="b1" onclick="myFunction3();">Show charset</button>
+<p id="p02"></p>
+<button id="b3" onclick="sh('p10','b3');">Show charset</button>
+<p id="p10"></p>
+<button id="b2" onclick="show1('p04','b2');" data-tooltip="Show charset">Show charset</button>
+<p id="p04"></p>
+
+<div id="demo8"></div>
+<br>
+<button onclick="clickButton()">Create a script</button>
+<p id="demo9"></p>
+
+<button onclick="checkDebounce()">Check debounce</button>
+<br>
+<button onclick="checkDefer()">Check defer</button>
+<br>
+
+<button onclick=" generator.next();">Generate a number</button>
+<br>
+<p id="demo6"><br></p>
+<button onclick="generator.next(1);">Reset</button>
+
+
+<br>
+<p>Click the button, to hide all elements with the class name "city", with JavaScript:</p>
+<button onclick="myFunction2()">Hide elements</button>
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+
+<br>
+<p><button onclick="clickCounter()" type="button">Local storage counter</button></p>
+<p id="result"><br></p>
+<p>Click the button to see the counter increase. Close the browser tab (or window), and try again, and the counter is reset.</p>
+<br>
+<p><button onclick="localStorage.setItem('now', Date.now()); console.log(localStorage.now);" type="button">Local storage date</button></p>
+<textarea style="width:200px; height: 60px;" id="area" placeholder="Напишите сообщение здесь"></textarea>
+<br>
+<button onclick="localStorage.removeItem('area');area.value=''">Очистить</button>
+
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<br>
+<form action="https://www.w3schools.com/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Your name.."   required><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Your last name.." required><br>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday"><br>
+  <label for="phone">Enter a phone number:</label>
+  <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+  <input type="radio" id="male" name="gender" value="male" checked>
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br>
+  <label for="cars">Choose a car:</label><br>
+  <select id="cars" name="cars" size="3" multiple>
+  <option value="volvo" >Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat" selected>Fiat</option>
+  <option value="audi" >Audi</option>
+  </select> <br>
+  <textarea name="message" rows="5" cols="30">
+  The cat was playing in the garden.
+  </textarea> <br>
+  <input type="submit" value="Submit">
+</form> 
+<br>
+
+<form style="display: table; max-width: 50%">
+	 <div style="display: table-row">
+  <label for="username" style="display: table-cell">Username:</label>
+  <input type="text" id="username" name="username" style="display: table-cell">
+</div>
+ <div style="display: table-row">
+  <label for="pwd" style="display: table-cell">Password:</label>
+  <input type="password" id="pwd" name="pwd" style="display: table-cell">
+  </div>
+   <div style="display: table-row">
+  <label for="myfile" style="display: table-cell">Select a file:</label>
+  <input type="file" id="myfile" name="myfile" style="display: table-cell">
+</div>
+ <div style="display: table-row; vertical-align: middle;">
+  <label for="quantity" style="display: table-cell; vertical-align: middle;"><div style="">Quantity <br>(between 1 and 5): </div></label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5" style="display: table-cell; ">
+</div>
+</form> 
+<br>
+
+<form action= "/action_page.php"  oninput="x.value=parseInt(a.value)+parseInt(b.value);">
+  0
+  <input type="range" id="a" name="a" value="50" >
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+</form>
+<br><br>
+
+  <div id="slider" class="slider">
+    <div class="thumb"></div>
+  </div>
+<br>
+
+<input onmousemove="this.value=event.clientX+':'+event.clientY" value="Наведи на меня мышь">
+
+<br><br>
+  Депозитный калькулятор.
+  <form name="calculator">
+    <table id="table-form">
+      <tr>
+        <td>Первоначальный депозит</td>
+        <td>
+          <input name="money" type="number" value="10000" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Срок вклада?</td>
+        <td>
+          <select name="months">
+            <option value="3">3 (минимум)</option>
+            <option value="6">6 (полгода)</option>
+            <option value="12" selected>12 (год)</option>
+            <option value="18">18 (1.5 года)</option>
+            <option value="24">24 (2 года)</option>
+            <option value="30">30 (2.5 года)</option>
+            <option value="36">36 (3 года)</option>
+            <option value="60">60 (5 лет)</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Годовая процентная ставка?</td>
+        <td>
+          <input name="interest" type="number" value="5" required>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <table id="diagram">
+    <tr>
+      <th>Было:</th>
+      <th>Станет:</th>
+    </tr>
+    <tr>
+      <th id="money-before"></th>
+      <th id="money-after"></th>
+    </tr>
+    <td>
+      <div style="background: red;width:40px;height:100px"></div>
+    </td>
+    <td>
+      <div style="background: green;width:40px;height:0" id="height-after"></div>
+    </td>
+  </table>
+<br>
+
+  <input type="button" value="Кликните, чтобы увидеть форму" id="show-button">
+  <div id="prompt-form-container">
+    <form id="prompt-form">
+      <div id="prompt-message"></div>
+      <input name="text" type="text">
+      <input type="submit" value="Ok">
+      <input type="button" name="cancel" value="Отмена">
+    </form>
+  </div>
+<br><br>
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+<br>
+
+<audio controls id="a1" volume="0.5">
+  <source src="stc.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio> 
+<br>
+<button type="button" onclick="window.alert(document.getElementById('a1').volume);">show volume</button>
+<br>
+<!-- <iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1">
+</iframe> -->
+
+
+<br>
+<div class="polaroid">
+  <img src="images/rock600x400.jpg" alt="Norway" style="width:100%">
+  Hardanger, Norway
+</div>
+
+<br>
+<p id="demo3"></p>
+<br>
+<p id="demo5"></p>
+
+  <div id="container"></div>
+
+  <table id="grid">
+    <thead>
+      <tr>
+        <th data-type="number">Возраст</th>
+        <th data-type="string">Имя</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>5</td>
+        <td>Вася</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Петя</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Женя</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Маша</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Илья</td>
+      </tr>
+    </tbody>
+  </table>
+
+<h2>Accordion with symbols</h2>
+<p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+  <div id="arrowTop" hidden></div>
+
+
+
+
+
+</div>
+</div>
+
+<div class="footer">
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+<!--<script >
+var answer1 = "It's alright";
+var answer2 = "He is called 'Johnny'";
+var answer3 = 'He is called "Johnny"';
+var y = 123e5;
+var z = 123e-5;
+var x1 = 6;
+var y1 = 5;
+var z1 = 6;
+document.getElementById("demo3").innerHTML =
+answer1 + "<br>" + 
+answer2 + "<br>" + 
+answer3 + "<br>" + 
+y + "<br>" + z + "<br>" + 
+(x1 == y1) + "<br>" + (x1 == z1);
+</script>-->
+
+</body>
+</html> 
