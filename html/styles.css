@@ -1,0 +1,316 @@
+* {
+    -moz-box-sizing: border-box; /* в Firefox нужен префикс */
+    box-sizing: border-box;
+}
+body {
+	background-color: rgba(255, 202, 102);
+  margin:0;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*.row {
+position: relative;
+}*/
+::selection {
+  color: red;
+  background: yellow;
+}
+h1{text-align: center;}
+h3 {
+  color: rgb(100,0,50);
+  font-family: verdana;
+  font-size: 90%;
+}
+h2 {
+  color: rgb(100,0,50);
+  font-family: verdana;
+  font-size: 80%;
+}
+ /*form {
+ border: 1px solid black;
+}*/
+.header {
+       padding:10px;
+    background-color: rgb(255, 155, 42);
+ }
+.left {
+/*    position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%; */
+
+  width:20%;
+     float:left;
+padding:5px;
+     background-color: rgb(255, 162, 92);
+  }
+ .menucontainer {
+        padding:5px;
+background-color: rgb(255, 222, 162);
+  width: 100%;
+   /*position: fixed;*/
+  /* top: 50px;*/
+ }
+.right {
+/*  margin-left: 20%;*/
+   float:left;
+    width:80%;
+    padding:10px;
+    background-color: rgb(255, 232, 162);
+}
+.footer {
+       padding:10px;
+    background-color: rgb(255, 112, 32);
+ }
+@media only screen and (max-width: 932px) {
+  /* For desktop: */
+  .left, .right {width: 100%;}
+}
+
+ a#l01:link,  a#l01:visited {
+  background-color: rgb(255, 221, 153);
+  color: black;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  font: 0.9em Arial, sans-serif;
+  display: inline-block;
+  border:1px solid black;
+  border-radius: 5px;
+}
+ a#l01:hover,  a#l01:active {
+  background-color:rgb(255, 204, 102);
+}
+/*input[type=text] {
+  width: 200px;
+  padding: 3px 10px;
+  margin: 3px 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+}*/
+select {
+  width: 100px;
+  padding: 3px 10px;
+   border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+div.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+div.polaroid:hover{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   cursor: pointer;
+}
+/* This is
+a multi-line
+comment */ 
+#calendar table {
+      border-collapse: collapse;
+    }
+#calendar td,
+#calendar th {
+      border: 1px solid black;
+      padding: 3px;
+      text-align: center;
+    }
+#calendar th {
+      font-weight: bold;
+      background-color: #E6E6E6;
+    }
+
+    table {
+       border-collapse: collapse;
+     }
+     th, td {
+       border: 1px solid black;
+       padding: 4px;
+     }
+#grid       th {
+       cursor: pointer;
+     }
+#grid     th:hover {
+       background: yellow;
+     }
+
+
+         .tooltip {
+      position: fixed;
+      padding: 10px 20px;
+      border: 1px solid #b3c9ce;
+      border-radius: 4px;
+      text-align: center;
+      font: italic 14px/1.3 sans-serif;
+      color: #333;
+      background: #fff;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+    }
+
+    .slider {
+  border-radius: 5px;
+  background: #E0E0E0;
+  background: linear-gradient(left top, #E0E0E0, #EEEEEE);
+  width: 310px;
+  height: 15px;
+  margin: 5px;
+}
+
+.thumb {
+  width: 10px;
+  height: 25px;
+  border-radius: 3px;
+  position: relative;
+  left: 10px;
+  top: -5px;
+  background: blue;
+  cursor: pointer;
+}
+
+
+    #arrowTop {
+      height: 9px;
+      width: 14px;
+      color: green;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+    }
+
+    #arrowTop::before {
+        font-size: 38px;
+ /*     content: '▲';*/
+ content: '⮙';
+      
+    }
+
+
+#table-form td{
+             border: 0px solid black;
+}
+    td select,
+    td input {
+      width: 150px;
+    }
+
+    #diagram td {
+      vertical-align: bottom;
+      text-align: center;
+      padding: 10px;
+      border: 0px solid black;
+    }
+
+    #diagram th {
+           border: 0px solid black;
+    }
+
+    #diagram div {
+      margin: auto;
+    }
+
+
+#prompt-form {
+  display: inline-block;
+  padding: 5px 5px 5px 70px;
+  width: 280px ;
+  border: 1px solid black;
+  background: white url(https://en.js.cx/clipart/prompt.png) no-repeat left 5px;
+  vertical-align: middle;
+}
+
+#prompt-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#prompt-form-container:before {
+  display: inline-block;
+  height: 100%;
+  content: '';
+  vertical-align: middle;
+}
+
+#cover-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.6;
+}
+
+#prompt-form input[name="text"] {
+  display: block;
+  margin: 5px;
+  width: 180px;
+}
+
+
+.accordion {
+  background-color:   rgb(255, 179, 102);
+  color:  rgb(128, 64, 0);
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 10px;
+    font-family: helvetica;
+/*          font-weight: bold;*/
+}
+
+.active, .accordion:hover {
+  background-color: rgb(255, 140, 26);
+}
+
+.accordion:after {
+  content: '\002B';
+  color:  rgb(128, 64, 0);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+/*  background-color: white; */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/*
+button#toggle-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-size: var(--mobile-font-size);
+  font-weight: 300;
+  padding: 0;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+*/
